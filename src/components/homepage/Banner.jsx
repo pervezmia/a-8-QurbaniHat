@@ -6,7 +6,7 @@ const Banner = () => {
     <div className="bg-[url('https://images.pexels.com/photos/12655640/pexels-photo-12655640.jpeg')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl">
       {/* Overlay */}
       <div className="w-full h-full rounded-lg bg-black/50 flex items-center ">
-        <div className="max-w-7xl mx-auto px-6 text-white">
+        <div className="px-6 text-white max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-2xl">
             Find Your Perfect Qurbani Animal
           </h1>

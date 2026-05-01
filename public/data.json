@@ -9,7 +9,7 @@
     "age": 3,
     "location": "Bogura",
     "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural food.",
-    "image": "https://i.postimg.cc/example-cow1.jpg",
+    "image": "https://images.pexels.com/photos/32544606/pexels-photo-32544606.jpeg",
     "category": "Large Animal"
   },
   {
@@ -22,7 +22,7 @@
     "age": 4,
     "location": "Rajshahi",
     "description": "High-quality Sahiwal cow with strong build and excellent health condition.",
-    "image": "https://i.postimg.cc/example-cow2.jpg",
+    "image": "https://images.pexels.com/photos/15477960/pexels-photo-15477960.jpeg",
     "category": "Large Animal"
   },
   {
@@ -35,7 +35,7 @@
     "age": 2,
     "location": "Kushtia",
     "description": "Popular Black Bengal goat, known for its tender meat and healthy growth.",
-    "image": "https://i.postimg.cc/example-goat1.jpg",
+    "image": "https://images.pexels.com/photos/27917921/pexels-photo-27917921.jpeg",
     "category": "Small Animal"
   },
   {
@@ -48,7 +48,7 @@
     "age": 2.5,
     "location": "Dhaka",
     "description": "Large-sized Jamunapari goat, well-maintained and ideal for Qurbani.",
-    "image": "https://i.postimg.cc/example-goat2.jpg",
+    "image": "https://images.pexels.com/photos/28249381/pexels-photo-28249381.jpeg",
     "category": "Small Animal"
   },
   {
@@ -61,7 +61,7 @@
     "age": 1.8,
     "location": "Chattogram",
     "description": "Healthy local sheep raised in natural environment, suitable for Qurbani.",
-    "image": "https://i.postimg.cc/example-sheep1.jpg",
+    "image": "https://images.pexels.com/photos/29023652/pexels-photo-29023652.jpeg",
     "category": "Small Animal"
   },
   {
