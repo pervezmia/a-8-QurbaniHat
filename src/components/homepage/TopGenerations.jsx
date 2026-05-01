@@ -1,4 +1,5 @@
-import PhotoCard from "./PhotoCard";
+import AnimalCard from "./AnimalCard";
+
 
 const TopGenerations = async() => {
     const res = await fetch ("https://a-8-qurbani-hat.vercel.app/data.json");
@@ -8,10 +9,10 @@ const TopGenerations = async() => {
     return (
         <div>
             <h1 className="text-2xl font-bold mt-5">Top Animals</h1>
-            <div className="grid grid-cols-4 gap-5 mt-5">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-5">
                 {
                     topData.map(animal => <div key={animal.id}>
-                        <PhotoCard animal = {animal}></PhotoCard>
+                        <AnimalCard animal={animal}></AnimalCard>
                     </div>)
                 }
             </div>
