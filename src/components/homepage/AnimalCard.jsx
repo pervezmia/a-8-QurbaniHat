@@ -1,5 +1,6 @@
 import { Button, Card, Chip } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AnimalCard = ({animal}) => {
@@ -21,7 +22,7 @@ const AnimalCard = ({animal}) => {
         <p className="bg-slate-200 px-3 rounded"> Age: {animal.age}</p>
         <p className="bg-slate-200 px-3 rounded">Location: {animal.location}</p>
       </div>
-      <Button className="w-full bg-violet-300 text-black">Details Info</Button>
+      <Link href={"/all-animals"}><Button className="w-full bg-violet-300 text-black">Details Info</Button></Link>
     </Card>
   );
 };
