@@ -1,40 +1,45 @@
+"use client";
 import { Button } from "@heroui/react";
+import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
-  const links = (
-    <>
-      <Link href={"/"} className="">
-        <button>Home</button>
-      </Link>
-      <Link href={"/"} className="">
-        <button>All Animals</button>
-      </Link>
-    </>
-  );
   return (
-    <div>
-      <div className="bg-slate-500 py-2">
-        <div className="flex justify-between items-center gap-5 max-w-7xl mx-auto ">
-          <div className="font-bold text-xl">Logo</div>
-          <div className="flex justify-between gap-2.5 items-center">
-            <Link href={"/"}>
-              <Button>Home</Button>
-            </Link>
-            <Link href={"/"}>
-              <Button>All Animals</Button>
-            </Link>
-          </div>
-          <div className="flex gap-2 ">
-            <Link href={"/"}>
-              <Button>Login</Button>
-            </Link>
-            <Link href={"/"}>
-              <Button>Register</Button>
-            </Link>
-          </div>
+    <div className="border-b px-2">
+      <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
+        <div className="flex gap-2 items-center">
+          <Image
+            src={"/logo.png"}
+            alt="logo"
+            loading="eager"
+            width={30}
+            height={30}
+            className="object-cover h-auto w-auto"
+          />
+          <h3 className="font-black text-lg">QurbaniHat.</h3>
         </div>
-      </div>
+
+        <ul className="flex items-center gap-5 text-sm">
+          <li>
+            <Link href={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link href={"/all-animals"}>All Animals</Link>
+          </li>
+          
+        </ul>
+
+        <div className="flex gap-4">
+          <ul className="flex items-center gap-2 text-sm">
+            <li>
+              <Link href={"/register"}><Button variant="outline">Register</Button></Link>
+            </li>
+            <li>
+              <Link href={"/signin"}><Button>SignIn</Button></Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
   );
 };
