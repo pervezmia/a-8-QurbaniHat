@@ -12,6 +12,7 @@ import { Check } from "@gravity-ui/icons";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 import Link from "next/link";
+import { FaGooglePlus } from "react-icons/fa";
 
 const SignInPage = () => {
   const onSubmit = async (e) => {
@@ -34,6 +35,14 @@ const SignInPage = () => {
 
     console.log({ data, error });
   };
+
+    const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google"
+    })
+  }
+
+
 
   return (
     <>
@@ -93,18 +102,24 @@ const SignInPage = () => {
               </Button>
             </div>
           </Form>
-          
-        
+
+         
+          <div>
+            <p className="text-center font-bold">Or</p>
+            <Button onClick={handleGoogleSignIn} variant="outline" className={"w-full"}>
+              {" "}
+              <FaGooglePlus /> Sign In with Google
+            </Button>
+          </div>
+
 
           <p className="text-xs mt-3">
             You have no account go to
             <Link href={"/register"} className="text-green-400">
               <span> register </span>
-            </Link> 
+            </Link>
             now.
           </p>
-
-          
         </div>
       </div>
     </>
