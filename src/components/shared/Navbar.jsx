@@ -15,8 +15,9 @@ const Navbar = () => {
   return (
     <div className="border-b px-2 mb-4">
       <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
-        <div className="flex gap-2 items-center">
-          <Image
+        <div>
+          <Link className="flex gap-2 items-center" href={"/"}>
+            <Image
             src={"/logo.png"}
             alt="logo"
             loading="eager"
@@ -25,6 +26,7 @@ const Navbar = () => {
             className="object-cover h-auto w-auto"
           />
           <h3 className="font-black text-lg">QurbaniHat.</h3>
+          </Link>
         </div>
 
         <ul className="flex items-center gap-5 text-sm">
