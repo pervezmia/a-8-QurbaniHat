@@ -131,7 +131,7 @@ const RegisterPage = () => {
             <div className="flex gap-2">
               <Button type="submit">
                 <Check />
-                Submit
+                Register
               </Button>
               <Button type="reset" variant="secondary">
                 Reset

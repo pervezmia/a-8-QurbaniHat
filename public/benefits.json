@@ -1,0 +1,56 @@
+[
+  {
+    "id": "tip_001",
+    "type": "tip",
+    "title": "Choose a Healthy Animal",
+    "description": "Ensure the animal is free from illness, injury, or visible defects.",
+    "benefits": [
+      "Better meat quality",
+      "Fulfills religious requirements",
+      "Reduces risk of disease"
+    ]
+  },
+  {
+    "id": "tip_002",
+    "type": "tip",
+    "title": "Meet Age Requirements",
+    "description": "Goats/sheep should be at least 1 year old, cows 2 years, camels 5 years.",
+    "benefits": [
+      "Ensures valid Qurbani",
+      "Provides sufficient meat quantity",
+      "Complies with guidelines"
+    ]
+  },
+  {
+    "id": "tip_003",
+    "type": "tip",
+    "title": "Buy from Trusted Sellers",
+    "description": "Purchase from reliable farms to ensure proper care and authenticity.",
+    "benefits": [
+      "Guarantees healthy animals",
+      "Ethical sourcing",
+      "Avoids fraud or misrepresentation"
+    ]
+  },
+  {
+    "id": "breed_001",
+    "type": "breed",
+    "name": "Boer Goat",
+    "description": "Large size and high-quality meat make it a popular choice.",
+    "benefits": ["High meat yield", "Fast growth rate", "Good body weight"]
+  },
+  {
+    "id": "breed_002",
+    "type": "breed",
+    "name": "Sahiwal Cow",
+    "description": "Known for adaptability and good meat production.",
+    "benefits": ["Heat tolerant", "Strong immunity", "Consistent meat quality"]
+  },
+  {
+    "id": "breed_003",
+    "type": "breed",
+    "name": "Dorper Sheep",
+    "description": "Fast-growing with excellent meat yield.",
+    "benefits": ["Low maintenance", "Quick weight gain", "High-quality meat"]
+  }
+]
