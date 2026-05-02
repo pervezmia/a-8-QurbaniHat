@@ -76,6 +76,7 @@ const RegisterPage = () => {
             <TextField
               isRequired
               name="url"
+              type="url"
               validate={(value) => {
                 if (!value) {
                   return "Url must be enter";
