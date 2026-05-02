@@ -35,6 +35,7 @@
   {
     "id": "breed_001",
     "type": "breed",
+    "title": "Buy from Trusted Sellers",
     "name": "Boer Goat",
     "description": "Large size and high-quality meat make it a popular choice.",
     "benefits": ["High meat yield", "Fast growth rate", "Good body weight"]
@@ -42,6 +43,7 @@
   {
     "id": "breed_002",
     "type": "breed",
+    "title": "Buy from Trusted Sellers",
     "name": "Sahiwal Cow",
     "description": "Known for adaptability and good meat production.",
     "benefits": ["Heat tolerant", "Strong immunity", "Consistent meat quality"]
@@ -49,6 +51,7 @@
   {
     "id": "breed_003",
     "type": "breed",
+    "title": "Buy from Trusted Sellers",
     "name": "Dorper Sheep",
     "description": "Fast-growing with excellent meat yield.",
     "benefits": ["Low maintenance", "Quick weight gain", "High-quality meat"]

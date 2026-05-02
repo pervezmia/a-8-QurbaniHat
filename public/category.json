@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "category": "Large Animal"
+  },
+  {
+    "id": 2,
+    "category": "Large Animal"
+  },
+  {
+    "id": 3,
+    "category": "Small Animal"
+  },
+  {
+    "id": 4,
+    "category": "Small Animal"
+  },
+  {
+    "id": 5,
+    "category": "Small Animal"
+  },
+  {
+    "id": 6,
+    "category": "Large Animal"
+  }
+]
