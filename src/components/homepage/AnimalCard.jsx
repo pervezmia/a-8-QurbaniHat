@@ -22,7 +22,7 @@ const AnimalCard = ({animal}) => {
         <p className="bg-slate-200 px-3 rounded"> Age: {animal.age}</p>
         <p className="bg-slate-200 px-3 rounded">Location: {animal.location}</p>
       </div>
-      <Link href={"/all-animals"}><Button className="w-full bg-violet-300 text-black">Details Info</Button></Link>
+      <Link href={`/all-animals/${animal.id}`}><Button className="w-full bg-violet-300 text-black">Details Info</Button></Link>
     </Card>
   );
 };
