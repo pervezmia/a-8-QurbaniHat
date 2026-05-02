@@ -97,10 +97,11 @@ const SignInPage = () => {
         
 
           <p className="text-xs mt-3">
-            Yet no account go to
+            You have no account go to
             <Link href={"/register"} className="text-green-400">
               <span> register </span>
-            </Link>
+            </Link> 
+            now.
           </p>
 
           

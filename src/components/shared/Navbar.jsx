@@ -34,6 +34,9 @@ const Navbar = () => {
           <li>
             <Link href={"/all-animals"}>All Animals</Link>
           </li>
+          <li>
+            <Link href={"/profile"}>Profile</Link>
+          </li>
         </ul>
 
         <div className="flex gap-4">
