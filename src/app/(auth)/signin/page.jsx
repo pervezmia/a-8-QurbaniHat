@@ -9,18 +9,37 @@ import {
   TextField,
 } from "@heroui/react";
 import { Check } from "@gravity-ui/icons";
+import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
+import Link from "next/link";
 
 const SignInPage = () => {
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.email.value;
     console.log({ email, password });
+
+    const { data, error } = await authClient.signIn.email({
+      email,
+      password,
+      callbackURL: "/",
+    });
+    if (data) {
+      toast.success("Sign in Successfully Done!");
+    }
+    if (error) {
+      toast.error("Something is Wrong!");
+    }
+
+    console.log({ data, error });
   };
 
   return (
     <>
-      <h3 className="text-center font-bold text-xl mt-5">This is Sign in page</h3>
+      <h3 className="text-center font-bold text-xl mt-5">
+        This is Log in page
+      </h3>
       <div className="flex items-center justify-center ">
         <div className="border p-6 rounded-xl my-4">
           <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
@@ -74,6 +93,12 @@ const SignInPage = () => {
               </Button>
             </div>
           </Form>
+          <p className="text-xs mt-3">
+            Yet no account go to
+            <Link href={"/register"} className="text-green-400">
+              <span> register </span>
+            </Link>
+          </p>
         </div>
       </div>
     </>

@@ -35,7 +35,7 @@ const Navbar = () => {
               <Link href={"/register"}><Button variant="outline">Register</Button></Link>
             </li>
             <li>
-              <Link href={"/signin"}><Button>SignIn</Button></Link>
+              <Link href={"/signin"}><Button>Log In</Button></Link>
             </li>
           </ul>
         </div>

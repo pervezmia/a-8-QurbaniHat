@@ -9,19 +9,48 @@ import {
   TextField,
 } from "@heroui/react";
 import { Check } from "@gravity-ui/icons";
+import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 
 const RegisterPage = () => {
-  const onSubmit = (e) => {
+  const router = useRouter();
+  
+  const onSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const name = e.target.name.value;
     const password = e.target.email.value;
-    console.log({ email, password, name });
+    const url = e.target.url.value;
+    console.log({ email, password, name, url });
+
+
+    const {data, error} = await authClient.signUp.email({
+      email,
+      password,
+      name,
+      url,
+      callbackURL: "/"
+    })
+
+    if(data){
+      toast.success("Register Successfully Done!");
+      router.push("/");
+    }
+    if(error){
+      toast.error("Something is Wrong!");
+    }
+
+    console.log({data,error});
   };
+
+
 
   return (
     <>
-      <h3 className="text-center font-bold text-xl mt-5">This is Sign in page</h3>
+      <h3 className="text-center font-bold text-xl mt-5">This is Register page</h3>
       <div className="flex items-center justify-center ">
         <div className="border p-6 rounded-xl my-4">
           <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
@@ -37,6 +66,20 @@ const RegisterPage = () => {
             >
               <Label>Name</Label>
               <Input placeholder="John Doe" />
+              <FieldError />
+            </TextField>
+            <TextField
+              isRequired
+              name="url"
+              validate={(value) => {
+                if (!value) {
+                  return "Url must be enter";
+                }
+                return null;
+              }}
+            >
+              <Label>Photo Url</Label>
+              <Input placeholder="Enter your url" />
               <FieldError />
             </TextField>
             <TextField
@@ -89,6 +132,7 @@ const RegisterPage = () => {
               </Button>
             </div>
           </Form>
+      <p className="text-xs mt-3">Already Register go to <Link href={"/signin"} className="text-green-400"><span> log in </span></Link></p>
         </div>
       </div>
     </>
