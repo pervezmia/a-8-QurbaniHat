@@ -93,12 +93,17 @@ const SignInPage = () => {
               </Button>
             </div>
           </Form>
+          
+        
+
           <p className="text-xs mt-3">
             Yet no account go to
             <Link href={"/register"} className="text-green-400">
               <span> register </span>
             </Link>
           </p>
+
+          
         </div>
       </div>
     </>

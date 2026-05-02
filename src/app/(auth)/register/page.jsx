@@ -13,11 +13,11 @@ import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
+import { FaGooglePlus } from "react-icons/fa";
 
 const RegisterPage = () => {
   const router = useRouter();
-  
+
   const onSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -26,31 +26,36 @@ const RegisterPage = () => {
     const url = e.target.url.value;
     console.log({ email, password, name, url });
 
-
-    const {data, error} = await authClient.signUp.email({
+    const { data, error } = await authClient.signUp.email({
       email,
       password,
       name,
       url,
-      callbackURL: "/"
-    })
+      callbackURL: "/",
+    });
 
-    if(data){
+    if (data) {
       toast.success("Register Successfully Done!");
       router.push("/");
     }
-    if(error){
+    if (error) {
       toast.error("Something is Wrong!");
     }
 
-    console.log({data,error});
+    console.log({ data, error });
   };
 
-
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google"
+    })
+  }
 
   return (
     <>
-      <h3 className="text-center font-bold text-xl mt-5">This is Register page</h3>
+      <h3 className="text-center font-bold text-xl mt-5">
+        This is Register page
+      </h3>
       <div className="flex items-center justify-center ">
         <div className="border p-6 rounded-xl my-4">
           <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
@@ -132,7 +137,20 @@ const RegisterPage = () => {
               </Button>
             </div>
           </Form>
-      <p className="text-xs mt-3">Already Register go to <Link href={"/signin"} className="text-green-400"><span> log in </span></Link></p>
+          
+          <div>
+            <p className="text-center font-bold">Or</p>
+            <Button onClick={handleGoogleSignIn} variant="outline" className={"w-full"}>
+              {" "}
+              <FaGooglePlus /> Sign In with Google
+            </Button>
+          </div>
+          <p className="text-xs mt-3">
+            Already Register go to{" "}
+            <Link href={"/signin"} className="text-green-400">
+              <span> log in </span>
+            </Link>
+          </p>
         </div>
       </div>
     </>
