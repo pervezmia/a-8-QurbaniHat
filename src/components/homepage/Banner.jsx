@@ -7,7 +7,7 @@ const Banner = () => {
       {/* Overlay */}
       <div className="w-full h-full rounded-lg bg-black/50 flex items-center ">
         <div className="px-6 text-white max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-2xl">
+          <h1 className="animate__animated animate__backInLeft text-4xl md:text-6xl font-bold mb-4 max-w-2xl">
             Find Your Perfect Qurbani Animal
           </h1>
           <p className="text-lg md:text-xl mb-6 max-w-xl text-gray-200">

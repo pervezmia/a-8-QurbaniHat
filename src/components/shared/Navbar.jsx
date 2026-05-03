@@ -16,7 +16,7 @@ const Navbar = () => {
     <div className="border-b px-2 mb-4">
       <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
         <div>
-          <Link className="flex gap-2 items-center" href={"/"}>
+          <Link className="flex gap-1 items-center" href={"/"}>
             <Image
             src={"/logo.png"}
             alt="logo"
@@ -25,7 +25,7 @@ const Navbar = () => {
             height={30}
             className="object-cover h-auto w-auto"
           />
-          <h3 className="font-black text-lg">QurbaniHat.</h3>
+          <h3 className="font-black text-lg animate__animated animate__bounce">QurbaniHat.</h3>
           </Link>
         </div>
 
@@ -43,7 +43,7 @@ const Navbar = () => {
 
         <div className="flex gap-4">
           {!user && (
-            <ul className="flex items-center gap-2 text-sm">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
               <li>
                 <Link href={"/register"}>
                   <Button variant="outline">Register</Button>
@@ -58,7 +58,7 @@ const Navbar = () => {
           )}
 
           {user && (
-            <div className="flex gap-3.5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
               <Avatar>
                 <Avatar.Image
                   alt={user?.name}

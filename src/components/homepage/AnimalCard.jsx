@@ -20,7 +20,7 @@ const AnimalCard = ({animal}) => {
       <p className="font-semibold">{animal.name}</p>
       <div className="flex md:flex  md:justify-between gap-2">
         <p className="bg-slate-200 px-3 rounded"> Age: {animal.age}</p>
-        <p className="bg-slate-200 px-3 rounded">Location: {animal.location}</p>
+        <p className="bg-slate-200 px-3 rounded">Price: {animal.price}</p>
       </div>
       <Link href={`/all-animals/${animal.id}`}><Button className="w-full bg-violet-300 text-black">Details Info</Button></Link>
     </Card>

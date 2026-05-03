@@ -9,7 +9,7 @@ const Tips = async () => {
   return (
     <div>
         <h3 className="font-bold mt-10 mb-3">Tips and Tricks</h3>
-        <div className="flex gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
       {data.map((d) => (
         <div key={d.id}>
           <Card>

@@ -18,7 +18,7 @@ const BookNow = () => {
     //   name,
     //   image,
     // });
-    toast.success("Successfully updated!");
+    toast.success("Successfully Booked!");
   };
   return (<Modal>
       <Button variant="secondary">Book Now</Button>

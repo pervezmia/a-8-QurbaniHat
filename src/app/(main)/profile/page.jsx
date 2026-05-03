@@ -7,6 +7,7 @@ const ProfilePage = () => {
   const userData = authClient.useSession();
   // const user = userData.data.user;
   const user = userData.data?.user;
+  console.log(user);
   return (
     <div>
       <h3>This is profile page</h3>

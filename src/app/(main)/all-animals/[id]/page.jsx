@@ -6,7 +6,7 @@ import React from "react";
 
 const PhotoDetailsPage = async ({ params }) => {
   const { id } = await params;
-  console.log(id);
+  // console.log(id);
 
   const res = await fetch("https://a-8-qurbani-hat.vercel.app/data.json");
   const data = await res.json();
