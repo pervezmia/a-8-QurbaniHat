@@ -25,11 +25,11 @@ const Navbar = () => {
             height={30}
             className="object-cover h-auto w-auto"
           />
-          <h3 className="font-black text-lg animate__animated animate__bounce">QurbaniHat.</h3>
+          <h3 className="font-black animate__animated animate__bounce">QurbaniHat.</h3>
           </Link>
         </div>
 
-        <ul className="flex items-center gap-5 text-sm">
+        <ul className="grid grid-cols-1 md:grid-cols-3 items-center gap-5 text-sm">
           <li>
             <Link href={"/"}>Home</Link>
           </li>
