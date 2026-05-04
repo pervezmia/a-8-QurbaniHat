@@ -3,15 +3,30 @@ import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
+import MyLink from "./MyLink";
 
 const Navbar = () => {
   const userData = authClient.useSession();
   // const user = userData.data.user;
   const user = userData.data?.user;
-  console.log(user);
+  // console.log(user);
   const handleSignOut = async () => {
     await authClient.signOut();
   }
+  const navItems = [
+    {
+      path: "/",
+      text: "Home",
+    },
+    {
+      path: "/all-animals",
+      text: "All Animals",
+    },
+    {
+      path: "/profile",
+      text: "Profile",
+    }
+  ]
   return (
     <div className="border-b px-2 mb-4">
       <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
@@ -30,7 +45,7 @@ const Navbar = () => {
         </div>
 
         <ul className="grid grid-cols-1 md:grid-cols-3 items-center gap-5 text-sm">
-          <li>
+          {/* <li>
             <Link href={"/"}>Home</Link>
           </li>
           <li>
@@ -38,7 +53,12 @@ const Navbar = () => {
           </li>
           <li>
             <Link href={"/profile"}>Profile</Link>
-          </li>
+          </li> */}
+          {
+            navItems.map((item, index) => (
+              <MyLink key={index} href={item.path}>{item.text}</MyLink>
+            ))
+          }
         </ul>
 
         <div className="flex gap-4">
