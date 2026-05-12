@@ -31,12 +31,12 @@ const RegisterPage = () => {
       password,
       name,
       url,
-      callbackURL: "/",
+      callbackURL: "/signin",
     });
 
     if (data) {
       toast.success("Register Successfully Done!");
-      router.push("/");
+      router.push("/signin");
     }
     if (error) {
       toast.error("Something is Wrong!");
